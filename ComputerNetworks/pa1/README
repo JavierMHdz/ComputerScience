@@ -1,0 +1,35 @@
+a) Javier Jesus Macossay Hernandez
+b) 9907093913
+c) I have created communication between a client and a server. The client sends a greeting to the server and the server replies.
+d) I have two code files. client.c is the client that sends the greetings to the server. server.c is always up and running and receives the greetings from the client and replies the greetings.
+e) The format of the all the messages exchanged is the same as the one specified on the instructions.
+
+Server Terminal:
+The server is up and running
+Receive greetings from <Client Name>
+Send greetings to <Client Name>
+
+Client Terminal:
+The client is up and running
+The client sent greetings to the server
+Get reply from <Server Name>
+
+The functions called in client.c are the following:
+socket()
+connect()
+send()
+recv()
+close()
+
+The functions called in server.c are the following:
+socket()
+bind()
+listen()
+accept()
+recv()
+send()
+close()
+
+g) The project will fail when the user puts a sever or client name input larger than MAXDATASIZE-1 (99) characters.
+
+h) I reused the code from Beej's Guide to C Programming and Network Programming. I just added the receive function in the server.c file and the send function in the client.c file.

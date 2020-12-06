@@ -1,0 +1,18 @@
+#Makefile for EE450 Homework 1
+# build an executable
+#all: helloworld test
+
+test: test.cpp
+	g++ -g -Wall -o test test.cpp
+
+#helloworld: helloworld.cpp
+#	g++ -g -Wall -o helloworld helloworld.cpp
+
+crc_tx: crc_tx.cpp
+	g++ -g -Wall -o crc_tx crc_tx.cpp
+
+crc_rx: crc_rx.cpp
+	g++ -g -Wall -o crc_rx crc_rx.cpp
+
+clean:
+	rm crc_tx

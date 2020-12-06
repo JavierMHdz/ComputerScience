@@ -1,0 +1,28 @@
+a) Name: Javier Jesus Macossay Hernandez
+b) Student ID: 9907093913
+c) What have you done in the assignment?
+I have done a software implementation of CRC and Checksum. Furthermore, I have compared
+the performance of CRC to Checksum, to see which method is more accurate. CRC is more
+accurate than Checksum.
+d)
+crc_tx.cpp: I did the CRC for the transmitter side. I read the data and
+the generator, at the end I append the remainder to the data, making it a
+codeword.
+crc_rx.cpp: I did the CRC for the receiver side. I read the data, then I did
+the same CRC XOR operation as in crc_tx.cpp and compared if the codeword
+had any errors.
+crc_vs_checksum.cpp: I did both receiver and transmitter side of CRC and
+Checksum, then compared their performance. Unfortunately, this file does not yield
+the desired output in the checksum part of the project. I believe I did not implement
+properly my checksum. However, I want to get feedback on what I did wrong and how can
+I improve, so I can learn from my mistakes and not repeat the same mistake next time
+I implement checksum.
+Makefile: It compiles all the *.cpp files in the folder.
+g) My program would fail if the random bit errors would flip the numbers in
+such a way that neither the CRC nor the Checksum method might detect the error.um Also,
+it would fail if the checksum ends up being the same in the receiver side as the sent
+checksum, but there are errors in the data, but the errors cannot be
+detected.
+h) I used the ideas from www.geeksforgeeks.org to be able to convert from binary
+decimal and decimal to binary. This function are in the crc_vs_checksum.cpp file
+with the functions called "decimalNum()" and "binaryNum()".
