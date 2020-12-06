@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>My House</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2929888,34.0241559</coordinates></Point>
+</Placemark>
+<Placemark><name>Jefferson and Vermont</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2911592,34.0253422</coordinates></Point>
+</Placemark>
+<Placemark><name>Lyon Center Pool</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2883677,34.0242560</coordinates></Point>
+</Placemark>
+<Placemark><name>Engineering Quad</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2889722,34.0206082</coordinates></Point>
+</Placemark>
+<Placemark><name>SGM Building</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2888873,34.0214060</coordinates></Point>
+</Placemark>
+<Placemark><name>Financial Aid Office</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2840188,34.0195906</coordinates></Point>
+</Placemark>
+<Placemark><name>El Centro Chicano</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2858652,34.0201330</coordinates></Point>
+</Placemark>
+<Placemark><name>Doheny Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2836148,34.0198323</coordinates></Point>
+</Placemark>
+<Placemark><name>Leavey Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2828845,34.0216141</coordinates></Point>
+</Placemark>
+<Placemark><name>Alumni House</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2828343,34.0194480</coordinates></Point>
+</Placemark>
+<Placemark><name>Architecture School</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2878607,34.0192557</coordinates></Point>
+</Placemark>
+<Placemark><name>Parkside Dorms</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2909345,34.0190081</coordinates></Point>
+</Placemark>
+</Document></kml>

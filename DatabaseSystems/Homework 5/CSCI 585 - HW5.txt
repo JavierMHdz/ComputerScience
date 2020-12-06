@@ -1,0 +1,6 @@
+Q2) Companies with the highest average
+1) Citigroup
+2) Bank of America Corp.
+3) Microsoft
+
+Q3) The reason the top three companies in the "sum" chart are different than the ones in "average" is because some companies did not operate all the years from 1955 until 2005. From a mathematical perspective, even though some companies made more money in total, their years of operation might be different. This creates a decrease or increase of the divisor, which is inversely proportional to the average. Thus, the average chart differs from the total sum chart.
