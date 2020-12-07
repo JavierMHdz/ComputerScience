@@ -1,0 +1,112 @@
+.initCard{
+    /* margin-top: 2vh; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    /* width: 98%; */
+    width: 100%;
+    height: 25vh;
+    box-shadow: 0 0.1vh 0.7vh 0 rgba(0,0,0,0.01),
+                0 0.3vh 1.4vh 0 rgba(0,0,0,0.19);
+    /* border: solid grey 0.05vh; */
+    line-height: 1.38;
+    cursor: pointer;
+}
+
+.initCardImg{
+    width: 27vh;
+    height: 21vh;
+    margin-top: 2vh;
+    object-fit: cover; 
+    padding: 0.5vh;
+    /* border: solid grey 0.1vh; */
+    border: solid rgba(0,0,0,0.19) 0.1vh;
+}
+
+.initCardContent{
+    margin-top: 1.5vh;
+}
+
+.initCardText{
+    height: 7vh;
+    overflow: hidden;
+}
+
+.world-tab{
+    background-color: blueviolet;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.politics-tab{
+    background-color: green;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.business-tab{
+    background-color: cadetblue;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.technology-tab{
+    background-color: greenyellow;
+    float: right;
+    color: black;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.sports-tab{
+    background-color: orange;
+    float: right;
+    color: black;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.any-other-tab{
+    background-color: dimgray;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.guardian-tab{
+    background-color: black;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.nytimes-tab{
+    background-color: gray;
+    float: right;
+    color: black;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.spinnerStyle{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.spinnerRow{
+    justify-content: center;
+}
+
+.loadingRow{
+    justify-content: center;
+}

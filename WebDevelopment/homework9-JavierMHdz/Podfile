@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'homework9' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for homework9
+    pod 'SwiftyJSON', '~> 4.0.0'
+    pod 'Alamofire', '~> 4.9.1'
+    pod 'Toast-Swift'
+    pod 'SwiftSpinner'
+    pod 'Charts', '~> 3.2.0'
+    pod 'XLPagerTabStrip'
+    pod 'SDWebImage', '~> 4.0'
+    pod 'Alamofire-SwiftyJSON'
+    pod 'TinyConstraints'
+
+  target 'homework9Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'homework9UITests' do
+    # Pods for testing
+  end
+
+end

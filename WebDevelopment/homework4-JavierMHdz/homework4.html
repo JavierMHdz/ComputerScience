@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Homework 4</title>
+		<style type="text/css">
+			#initialForm{
+				margin: 100px auto auto auto;
+				width: 50%;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="initialForm" method="GET">
+			<h4>Enter URL for list of tallest building JSON File</h4>
+			<input type="text" name="URL"><br><br>
+			<input type="button" value="Submit Query" onclick="submitFunction(this.form)">
+		</form>
+		<script type="text/javascript">
+			function submitFunction(myform){
+				if(myform.URL.value != ""){
+
+					//Flag to check if JSON file has building list
+					//This is part of the error handling
+					var foundRows = false;
+
+					//Invalid structure flag
+					var invStruct = false;
+
+					//Store the url
+					var url = myform.URL.value;
+
+					//Create the XMLHTPP Object
+					function loadJSON(functionURL){
+
+						var xmlhttp = new XMLHttpRequest();
+
+						//GET = appends to URL, false = synchronous
+						xmlhttp.open("GET", functionURL, false);
+						
+						//This function checks if the xmlhtpp.status gets to 200, which stands for OK
+						setTimeout(
+							function(){
+								if(xmlhttp.status != 200){
+									xmlhttp.abort();
+									alert("The JSON file does not exist.");
+								}
+							},
+						1000);
+
+						xmlhttp.send();
+						var jsonObj = JSON.parse(xmlhttp.responseText);
+						return jsonObj;
+					}
+					
+					//Generate HTML
+					function generateHTML(jsonObj){
+						var htmlText = "<html><head><title>Largest Manufacturers by Production (2017)</title></head><body><table border='2'><tbody><tr>";
+
+						//Output the headers
+						var header = jsonObj.Mainline.Table.Header.Data;
+						for(var i = 0; i < header.length; i++){
+							htmlText += "<th>" + header[i] + "</th>";
+						}
+						htmlText += "</tr>";
+
+						var numRows = jsonObj.Mainline.Table.Row;
+
+						//The JSON file has buildings
+						if(numRows && numRows.length != 0){
+							foundRows = true;
+							//Output of the table content
+							var x = 200;
+							var y = 200;
+
+							for(var i = 0; i < numRows.length; i++){
+								//Array of keys
+								var buildingNodeList = numRows[i];
+								var buildingKeys = Object.keys(buildingNodeList);
+								htmlText += "<tr>";
+
+								for(var j = 0; j < buildingKeys.length; j++){
+									var individualKey = buildingKeys[j];
+
+									if(individualKey == "Rank"){
+										htmlText += "<td><p>" + buildingNodeList[individualKey] + "</p></td>";
+									}
+									else if(individualKey == "Name"){
+										htmlText += "<td><p>" + buildingNodeList[individualKey] + "</p></td>";
+									}
+									else if(individualKey == "Hubs"){
+										var hubs = buildingNodeList[individualKey];
+										var listStarted = false;
+										if(hubs.Hub != undefined){
+											htmlText += "<td><ul>";
+											for(var k = 0; k < hubs.Hub.length; k++){
+												if(hubs.Hub[k] == ""){
+													continue;
+												}
+												//boldfaced
+												if(!listStarted){
+													htmlText += "<li><b>" + hubs.Hub[k] + "</b></li>";
+													//Change the listStarted flag
+													listStarted = true;
+												}
+												else if(listStarted){
+													htmlText += "<li>" + hubs.Hub[k] + "</li>";
+												}
+
+											}
+											htmlText += "</ul></td>";
+										}
+										else{
+											invStruct = true;
+										}
+									}
+									else if(individualKey == "Height"){
+										htmlText += "<td><p>" + buildingNodeList[individualKey] + "</p></td>";
+									}
+									else if(individualKey == "HomePage"){
+										htmlText += "<td><a href='" + buildingNodeList[individualKey] + "'>" + buildingNodeList[individualKey] + "</a></td>";
+									}
+									else if(individualKey == "Logo"){
+										htmlText += "<td><img src='" + buildingNodeList[individualKey] + "' width='" + x + "' height='" + y + "'></td>";
+									}
+									else{
+										invStruct = true;
+									}
+
+								} //End of inner loop
+								htmlText += "</tr>";
+							} //End of outer loop
+						} //End of if(numRows) bracket
+
+						//Closing the htmlText with or without rows
+						htmlText += "</tbody></table></bo" + "dy></html>";
+						return htmlText;
+
+					} //End of generateHTML function
+
+					var jsonObj = loadJSON(url);
+
+					//Firefox
+					if(typeof jsonObj.Mainline !== "undefined"){
+						var htmlOutput = generateHTML(jsonObj);
+						if(foundRows && !invStruct){
+							var hWin = window.open("","Assignment4","height=800,width=1200");
+							hWin.document.write(htmlOutput);
+							hWin.document.close();
+						}
+						else if(!foundRows){
+							alert("This JSON file does not have buildings.");
+						}
+
+						if(invStruct){
+							alert("The JSON file has an invalid structure.");
+						}
+					}
+					else{
+						alert("The JSON file has an empty JSON Object.");
+					}
+				}
+				else{
+					alert("Text box was left empty.");
+				}
+
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+.italicWords{
+    font-style: italic;
+}
+
+p.italicWords{
+    font-size: 3vh;
+}
+
+.paragraphSmall{
+    font-size: 2.5vh;
+    overflow: hidden;
+    line-height: 3vh;
+    margin-bottom: 0%;
+    height: 17.8vh;
+}
+
+.paragraphBig{
+    font-size: 2.5vh;
+    overflow: hidden;
+    line-height: 3vh;
+    margin-bottom: 0%;
+    height: auto;
+}
+
+h1.italicWords{
+    font-size: 4.3vh;
+}
+
+img.detailed_article_image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.iconColumn{
+    float: right;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+}
+
+.iconRow{
+    height: 5vh;
+    margin-bottom: 2vh;
+}
+
+.detailedArticleOutsideContainer{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vh;
+    box-shadow: 0 0.1vh 0.7vh 0 rgba(0,0,0,0.01),
+                0 0.3vh 1.4vh 0 rgba(0,0,0,0.19);
+}
+
+.arrow{
+    text-align: right;
+    width: 100%;
+    margin-top: 0%;
+}
+
+.toast_style{
+    color: black;
+}

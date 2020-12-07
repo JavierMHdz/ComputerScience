@@ -1,0 +1,70 @@
+#maincontainer{
+	margin: auto;
+	width: 731px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+#headercontainer{
+	overflow: hidden;
+	text-align: center;
+	border: 1px solid black;
+	height: 110px;
+	width: 550px;
+	margin: auto;
+	margin-top: 36px;
+}
+#name{
+	font-size: 50px;
+	margin-top: 15px;
+	margin-bottom: -14px;
+	text-align: center;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+.link{
+	display: inline;
+	padding: 4px;
+	font-style: italic;
+}
+.subdivisions{
+	text-decoration: none;
+	color: #A9A9A9;
+}
+#currentpage{
+	color: black;
+}
+#picturecontainer{
+	text-align: center;
+}
+.picture{
+	display:inline;
+}
+.picture img{
+	width: 360px;
+	height: 360px;
+	object-fit: cover;
+}
+#bottom{
+	margin-bottom: 30px;
+	font-style: italic;
+	text-align: center;
+	color: #A9A9A9;
+	margin-top: 30px;
+	font-size: 10px;
+}
+#bottom img{
+	width: 30px;
+	height: 30px;
+}
+#naturecontainer{
+	height: 70px;
+	margin-top: 0px;
+	margin-left: 4px;
+	padding-top: 15px;
+	font-size: 30px;
+}
+#nature{
+	color: black;
+
+}
+#naturewhite{
+	color: white;
+}

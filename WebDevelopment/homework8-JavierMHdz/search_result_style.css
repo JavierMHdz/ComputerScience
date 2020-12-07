@@ -1,0 +1,130 @@
+.outsideContainer{
+    font-style: italic;
+    width: 37.5vh;
+    padding: 0.5vh;
+    /* background-color: blue; */
+
+}
+
+.searchTitle{
+    font-size: 2.3vh;
+}
+
+.imageBottomRow{
+    /* background-color: green; */
+    margin-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.innerMarginContainer{
+    margin-top: 1vh;
+    /* background-color: red; */
+}
+
+.searchContentContainer{
+    /* background-color: pink; */
+    box-shadow: 0 0.1vh 0.7vh 0 rgba(0,0,0,0.01),
+    0 0.3vh 1.4vh 0 rgba(0,0,0,0.19);
+}
+
+.search_result_image{
+    width: 30vh;
+    height: 22.5vh;
+    object-fit: contain;
+    margin: auto;
+    /* width: 50%; */
+    
+}
+
+.imageContainer{
+    /* background-color: green; */
+    border: solid rgba(0,0,0,0.19) 0.1vh;
+    width: 32vh;
+    height: 0vh;
+    padding-bottom: 22vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    object-fit: contain;
+}
+
+.world-tab{
+    background-color: blueviolet;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.politics-tab{
+    background-color: green;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.business-tab{
+    background-color: cadetblue;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.technology-tab{
+    background-color: greenyellow;
+    float: right;
+    color: black;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.sports-tab{
+    background-color: orange;
+    float: right;
+    color: black;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.any-other-tab{
+    background-color: dimgray;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.guardian-tab{
+    background-color: black;
+    float: right;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.nytimes-tab{
+    background-color: gray;
+    float: right;
+    color: black;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+}
+
+#shareClick{
+    width: 3.7vh;
+    height: 3.7vh;
+    opacity: 1;
+}
+
+#trashClick{
+    width: 3.2vh;
+    height: 3.2vh;
+    opacity: 1;
+}
+
+.toast_style{
+    color: black;
+}
