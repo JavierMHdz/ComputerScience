@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Homework 4</title>
+		<style type="text/css">
+			#mainPageForm{ margin:100px auto auto auto; width:50%; text-align: center;}
+		</style>
+	</head>
+	<body>
+		<form id="mainPageForm" method="POST" name="myform">
+			<h4>Enter URL for Cointainer Shipping Companies List JSON File</h4>
+			<input type="text" id="submitText" name="URL" value="containerlist.json"><br><br>
+			<input type="button" value="Submit Query" id="submitButton" onclick="mainFunction(this.form)">
+		</form>
+		<script type="text/javascript">
+			function mainFunction(myform){
+				if(myform.URL.value != ""){
+					var foundRows = false; //This variable checks if JSON file has container shipping companies
+					var url = myform.URL.value;
+					//Create the XMLHTTP Object
+					function loadJSON(url){
+						if(window.XMLHttpRequest){ //code for IE7+, Firefox, Chrome, Opera, Safari
+							var xmlhttp = new XMLHttpRequest();
+						} else{ //code for IE6, IE5
+							var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+						}
+						xmlhttp.open("GET",url,false); //GET = appends to URL, false = synchronous
+
+						//This function is to check if the xmlhttp.status gets to 200, which stands for OK
+						setTimeout(
+							function(){
+								if(xmlhttp.status != 200){
+									xmlhttp.abort();
+									alert("The JSON file does not exist.");
+								}
+							},
+						3000);
+
+						xmlhttp.send();
+						var jsonObj = JSON.parse(xmlhttp.responseText);
+						return jsonObj;
+					}
+					//Generate HTML
+					function generateHTML(jsonObj){
+						var htmlText = "<html><head><title>Top Container Shipping Companies</title></head><body>";
+						htmlText += "<table border='2'>";
+						htmlText += "<tbody>";
+						
+						//Output the headers
+						var header = jsonObj.Mainline.Table.Header.Data;
+						htmlText += "<tr>";
+						for(var i = 0; i < header.length; i++){
+							htmlText += "<th>" + header[i] + "</th>";
+						}
+						htmlText += "</tr>";
+
+						//Output the table content
+						var x = 200;
+						var y = 100;
+						var numRows = jsonObj.Mainline.Table.Row;
+						if(numRows == undefined){ //This if statement checks if there are container shipping companies
+							alert("This JSON file does not have container shipping companies.");
+						} else{
+							foundRows = true;
+							for(var i = 0; i < numRows.length; i++){
+								//Array of keys
+								var containerNodeList = jsonObj.Mainline.Table.Row[i];
+								var containerKeys = Object.keys(containerNodeList);
+								htmlText += "<tr>";
+								for(var j = 0; j < containerKeys.length; j++){
+									var individualKey = containerKeys[j];
+									if(individualKey=="Logo"){
+										htmlText += "<td><img src='" + containerNodeList[individualKey] +"'width='" + x + "'height='" + y + "'></td>";
+									} else if(individualKey == "HomePage"){
+										htmlText += "<td><a href='" + containerNodeList[individualKey] + "'>" + containerNodeList[individualKey] + "</a></td>";
+									} else if(individualKey == "Hubs"){
+										var hubs = containerNodeList[individualKey];
+										htmlText += "<td><ul>";
+										for(var k = 0; k < hubs.Hub.length; k++){
+											if(hubs.Hub[k] == hubs.Hub[0]){
+												htmlText += "<li><b>" + hubs.Hub[k] + "</b></li>";
+											} else{
+												htmlText += "<li>" + hubs.Hub[k] + "</li>";
+											}
+										}
+										htmlText += "</ul></td>";
+									} else{
+										htmlText += "<td>" + containerNodeList[individualKey] + "</td>";
+									}
+								}
+								htmlText += "</tr>";
+							}
+							htmlText += "</tbody>";
+							htmlText += "</table>";
+							htmlText += "</body>";
+							htmlText += "</html>";
+							return htmlText;
+						}
+					}
+					var jsonObj = loadJSON(url);
+					if(window.ActiveXObject){ //for Internet Explorer
+						var htmlOutput = generateHTML(jsonObj);
+						if(foundRows == true){
+							var hWin = window.open("","Assignment4","height=800,width=600");
+							hWin.document.write(htmlOutput);
+							hWin.document.close();
+						}
+					} else{ //for Firefox, this is executed once JSON object has loaded
+						var htmlOutput = generateHTML(jsonObj);
+						if(foundRows == true){
+							var hWin = window.open("","Assignment4","height=800,width=600");
+							hWin.document.write(htmlOutput);
+							hWin.document.close();
+						}
+					}
+				} else{
+					alert("Text box was left empty.");
+				}
+			}
+		</script>
+	</body>
+</html>
