@@ -1,0 +1,1 @@
+I just changed the classifier given in Matlab. I changed the normalize parameter from 3 to 1. Thus, instead of using a zscore, I am using min and std (standard deviation). Furthermore, I changed the classifier from diaglinear to diagquadratic.
