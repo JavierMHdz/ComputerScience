@@ -1,0 +1,517 @@
+	/*Attempt #3*/	
+	#mainContainer{
+		position:absolute;
+		overflow:hidden;
+		margin:auto;
+		width:1523px;
+		left:0px;
+		right:0px;
+	}
+
+	/*This is the header section*/
+	#header{
+		position:relative;
+		overflow:hidden;
+		background: white;
+		font-family: sans-serif;
+		margin-top:40px;
+		margin-right:0px;
+		margin-bottom:40px;
+		margin-left:146px;
+		max-width: 660px
+		min-width:660px;
+	}
+
+	h3.menu{
+		float: left;
+		font-weight: 40;
+		margin-top: 40px;
+	}
+
+	div.allLinks{
+		padding-right:115px;
+	}
+
+	h4.header-right{
+		float:right;
+		padding-right: 0px;
+		padding-top: 21px;
+		padding-bottom: 21px;
+		padding-left:20px;
+	}
+
+	h4.header-right a{
+		color: #b3b3b3;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	h4.header-right a:hover{
+		color:black;
+	}
+	/*Here the header section ends*/
+
+	/*Lawyer section starts here*/
+	#lawyer{
+		position:relative;
+		overflow:hidden;
+		height:135%;
+		width:660px;
+		background-image:url(http://csci571.com/hw/hw3/images/lawyer.jpg);
+		background-repeat: no-repeat;
+		padding:427px;
+		margin-bottom: -17px;
+	}
+
+	form.formOne{
+		position:absolute;
+		top:200px;
+		left:40px;
+		background: #004466;
+		padding: 40px;
+		margin-left: 107px;
+		max-width:260px;
+		min-width:260px;
+		line-height: 34px;
+		padding-bottom:61px;
+		padding-right:153px;
+	}
+
+	div.formOneText{
+		text-transform: uppercase;
+		color: white;
+		font-size:104%;
+		font-family:sans-serif;
+		font-weight: 40;
+		margin-left:-2px;
+		margin-top:-2px;
+		margin-right:-110px;
+	}
+
+	span.formOneSpan{
+		font-size:280%;
+	}
+
+	p.yellowText{
+		color:yellow;
+		font-family:sans-serif;
+		font-size:104%;
+		font-style:italic;
+		margin:-2px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	input.formOneSubmit{
+		font-size:113%;
+		line-height:50px;
+		margin:-2px;
+		width:363px;
+	}
+
+	::placeholder{
+		color:black;
+		opacity:1;
+		font-size:100%;
+	}
+
+	input.formOneSubmitButton{
+		background-color:yellow;
+		font-weight: 40;
+		border:none;
+		height:50px;
+		width:203px;
+		font-size:100%;
+		margin-left:-2px;
+	}
+
+	input.formOneSubmitButton:hover{
+		background:#002233;
+		color:white;
+	}
+	/*Lawyer sections ends here*/
+
+	/*Amazing Features section starts here*/
+	#amazingFeatures{
+		position:relative;
+		background-color: white;
+		font-weight: 40;
+		font-family: Lucida Grande, sans-serif;
+		text-align:left;
+		margin-right:0px;
+		margin-top:16px;
+		margin-bottom:0px;
+		padding-top: 180px;
+		padding-left: 180px;
+		padding-right: 180px;
+		padding-bottom: 180px;
+	}
+
+	#featureOne{
+		position:absolute;
+		top:50px;
+		left:174px;
+		right:995px;
+		font-size:80%;
+		margin-top:29px;
+	}
+
+	#featureTwo{
+		position:absolute;
+		top:50px;
+		left:592px;
+		right:577px;
+		font-size:80%;
+		margin-top:29px;
+	}
+
+	#featureThree{
+		position:absolute;
+		top:50px;
+		left:1039px;
+		right:128px;
+		font-size:80%;
+		margin-top:29px;
+	}
+
+	p.feature{
+		color:grey;
+	}
+
+	/*Amazing Features section ends here*/
+
+	/*This is the Quote CEO section*/
+	#quoteCEO{
+		position:relative;
+		background:#e6e6e6;
+		margin-top: 0px;
+		margin-bottom: -19px;
+		text-align: center;
+		font-family: Lucida Grande, sans-serif;
+		margin-right:0px;
+		padding-top: 140px;
+		padding-bottom: 162px;
+		font-size:140%;
+	}
+
+	span.nameCEO{
+		font-size:70%;
+	}
+	span.greyPartOfQuote{
+		color:grey;
+	}
+	/*This is the Quote CEO section ends*/
+
+	/*This is where the Monthly Plans section starts*/
+	#monthlyPlans{
+		position:static;
+		text-align: center;
+		margin-top:-28px;
+		margin-bottom:0px;
+		margin-left:0px;
+		margin-right:0px;
+		background-image:url(http://csci571.com/hw/hw3/images/glasses.png);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-attachment: fixed;
+		background-size:2700px 2400px;
+		z-index:-3;
+	}
+
+	#monthlyPlansContent{
+		position:static;
+		text-align: center;
+		margin-top:19px;
+		margin-bottom:0px;
+		margin-left:0px;
+		margin-right:0px;
+		background-color:rgba(230,230,230,0.8);	
+		height:1000px;	
+		z-index: -2;
+	}
+
+	#monthlyPlansContent p{
+		text-align: center;
+		min-width: 1523px;
+		max-width: 1523px;
+		color:black;
+		font-family: Lucida Grande, sans-serif;
+		font-size:170%;
+		padding-top:35px;
+	}
+
+	span.monthlyPlansHeader{
+		font-size:80%;
+		color:grey;
+	}
+
+	#whiteBackgroundOne{
+		position:absolute;
+		background-color: white;
+		margin-top: 41px;
+		margin-bottom: 0px;
+		margin-right: 65px;
+		margin-left: 118px;
+		padding-right:320px;
+		padding-left:10px;
+		padding-bottom: 663px;
+		z-index: 1;
+	}
+
+	#whiteBackgroundTwo{
+		position:absolute;
+		background-color: white;
+		margin-top: 41px;
+		margin-bottom: 0px;
+		margin-right: 65px;
+		margin-left: 599px;
+		padding-right:320px;
+		padding-left:10px;
+		padding-bottom: 663px;
+		z-index: 1;
+	}
+
+	#whiteBackgroundThree{
+		position:absolute;
+		background-color: white;
+		margin-top: 41px;
+		margin-bottom: 0px;
+		margin-right: 65px;
+		margin-left: 1080px;
+		padding-right:320px;
+		padding-left:10px;
+		padding-bottom: 663px;
+		z-index: 1;
+	}
+
+	#gridBackgroundOne{
+		position:absolute;
+		background-image:url(http://csci571.com/hw/hw3/images/grid.png);
+		margin-top: 41px;
+		margin-bottom: 0px;
+		margin-right: 65px;
+		margin-left: 118px;
+		padding-right:320px;
+		padding-left:10px;
+		padding-bottom: 663px;
+		z-index: 10;
+		opacity: 0.1;
+	}
+	#gridBackgroundTwo{
+		position:absolute;
+		background-image:url(http://csci571.com/hw/hw3/images/grid.png);
+		margin-top: 41px;
+		margin-bottom: 0px;
+		margin-right: 65px;
+		margin-left: 599px;
+		padding-right:320px;
+		padding-left:10px;
+		padding-bottom: 663px;
+		z-index: 10;
+		opacity: 0.1;
+	}
+	#gridBackgroundThree{
+		position:absolute;
+		background-image:url(http://csci571.com/hw/hw3/images/grid.png);
+		margin-top: 41px;
+		margin-bottom: 0px;
+		margin-right: 65px;
+		margin-left: 1080px;
+		padding-right:320px;
+		padding-left:10px;
+		padding-bottom: 663px;
+		z-index: 10;
+		opacity: 0.1;
+	}
+	
+	#textBasicPlan p{
+		position:absolute;
+		margin-top: 41px;
+		margin-left: -481px;
+		margin-right:0px;
+		z-index: 10;
+		font-family: Lucida Grande, sans-serif;
+		font-size:100%;
+		color:grey;
+		line-height: 3;
+	}
+
+	#textBasicPlan input{
+		position:absolute;
+		margin-top: 546px;
+		margin-left: -573px;
+		margin-right:0px;
+		z-index: 10;
+		font-family: Lucida Grande, sans-serif;
+		color:white;
+		background-color:#004080;
+		font-weight: 40;
+		border:none;
+		height:62px;
+		width:203px;
+		font-size:100%;
+		z-index: 10;
+	}
+
+	span.planTitle{
+		font-size:170%;
+		color:black;
+	}
+	span.monthlyPrices{
+		color:black;
+		font-size:200%;
+		line-height: 1;
+	}
+
+	#textBasicPlan input:hover{
+		background:#00264d;
+	}
+
+	#textStandardPlan p{
+		position:absolute;
+		margin-top: 41px;
+		margin-left: -2px;
+		margin-right:0px;
+		z-index: 10;
+		font-family: Lucida Grande, sans-serif;
+		font-size:100%;
+		color:grey;
+		line-height: 3;
+	}
+
+	#textStandardPlan input{
+		position:absolute;
+		margin-top: 546px;
+		margin-left: -95px;
+		margin-right:0px;
+		z-index: 10;
+		font-family: Lucida Grande, sans-serif;
+		color:white;
+		background-color:#004080;
+		font-weight: 40;
+		border:none;
+		height:62px;
+		width:203px;
+		font-size:100%;
+		z-index: 10;
+	}
+
+	#textStandardPlan input:hover{
+		background:#00264d;
+	}
+
+	#textCorporatePlan p{
+		position:absolute;
+		margin-top: 41px;
+		margin-left: 477px;
+		margin-right:0px;
+		z-index: 10;
+		font-family: Lucida Grande, sans-serif;
+		font-size:100%;
+		color:grey;
+		line-height: 3;
+	}
+
+	#textCorporatePlan input{
+		position:absolute;
+		margin-top: 546px;
+		margin-left: 386px;
+		margin-right:0px;
+		z-index: 10;
+		font-family: Lucida Grande, sans-serif;
+		color:white;
+		background-color:#004080;
+		font-weight: 40;
+		border:none;
+		height:62px;
+		width:203px;
+		font-size:100%;
+		z-index: 10;
+	}
+
+	#textCorporatePlan input:hover{
+		background:#00264d;
+	}
+
+	/*This is where the Monthly Plans section ends*/
+
+	/*This is where the Best App section starts*/
+	#bestApp{
+		clear:both;
+		position:static;
+		margin-bottom:-16px;
+		background-image: url(http://csci571.com/hw/hw3/images/notebook.jpg);
+		max-width:1523px;
+		min-width:1523px;
+		background-clip:padding-box;
+		background-position: center;
+		z-index:-1;
+	}
+	div.bestAppText{
+		background-color: rgba(0,38,77,0.75);
+		color:white;
+		font-family: Lucida Grande, sans-serif;
+		text-align:center;
+		padding-bottom: 307px;
+		padding-top: 254px;
+		line-height: 43px;
+		font-size:120%;
+	}
+
+	span.bestAppTextUppercase{
+		text-transform: uppercase;
+		font-size:200%;
+		font-weight: 100;
+	}
+
+
+	input.bestAppSubmitButton{
+		background-color:yellow;
+		font-weight: 40;
+		border:none;
+		height:62px;
+		width:245px;
+		font-size:100%;
+		margin-left:-2px;
+		z-index: 10;
+	}
+	input.bestAppSubmitButton:hover{
+		background:#002233;
+		color:white;
+	}
+	/*This is where the Best App section ends*/
+
+
+
+	/*This is where the footer section starts*/
+	#footer{
+		position:relative;
+		background: #002233;
+		color:white;
+		font-family:Lucida Grande, sans-serif;
+		text-align:center;
+		font-size: 100%;
+		font-weight: 100;
+		max-width:1523px;
+		min-width:1523px;
+		margin-top: -3px;
+	}
+	div.address{
+		padding-top: 70px;
+		padding-bottom: 20px;
+	}
+	span.bizOptimaAddress{
+		font-size:70%;
+		font: 100;
+		color: #BFBFBF;
+	}
+	img.activeImage{
+		width:2%;
+		height:2%;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 70px;
+	}
+	/*This is where the footer section ends*/
+
+
